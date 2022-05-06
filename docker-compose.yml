@@ -1,0 +1,23 @@
+version: '3.5'
+
+services:
+    control-db:
+        container_name: postgres_bd
+        image: postgres:latest
+        environment:
+            POSTGRES_USER: pgsql
+            POSTGRES_PASSWORD: pgsql
+            POSTGRES_DB: 'control_db'
+            POSTGRES_ROOT_USER: pgsql
+            POSTGRES_ROOT_PASSWORD: pgsql
+        volumes:
+            - control_db:/data/postgres
+        ports:
+            - "4000:5432"
+        networks:
+            - postgres 
+networks:
+    postgres:
+        driver: bridge
+volumes:
+   control_db:
