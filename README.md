@@ -1,5 +1,11 @@
-Comandos Utilizados:
+# Comando Utilizado na Aplicação Web
 
-Criar uma migration: vendor/bin/phinx create
+php -S localhost:80
 
-Executar as migrations: vendor/bin/phinx migrate -e development
+# Comandos Utilizados na Migração
+
+## Criar uma migration 
+vendor/bin/phinx create <i><nome da migration></i>
+
+## Executar as migrations: 
+vendor/bin/phinx migrate -e development
