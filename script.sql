@@ -5,6 +5,13 @@ CREATE TABLE IF NOT EXISTS category(
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS payment_method(
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  about TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 CREATE TABLE IF NOT EXISTS login(
   id SERIAL PRIMARY KEY,
   username VARCHAR(255) NOT NULL,
@@ -13,5 +20,7 @@ CREATE TABLE IF NOT EXISTS login(
 
 insert into category (name, about) values('Teste1', 'Teste1');
 insert into category (name, about) values('Teste2', 'Teste2');
+
+insert into payment_method (name, about) values('Teste1', 'Teste1');
 
 insert into login (username, password) values('admin', 'admin123');
