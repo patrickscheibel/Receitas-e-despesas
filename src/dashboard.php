@@ -40,7 +40,6 @@ spl_autoload_register(function($class) {
             print     '<a href="index.php" class="btn btn-secondary">Sair</a>';
             print     '<div class="container">';
             print       '<h1 class="display-3">Bem vindo</h1>';
-            print       '<p>Dashboard Simples</p>';
             print     '</div>';
             print   '</div>';
             print   '<div class="container">';

@@ -44,7 +44,7 @@
             if($read->rowCount() > 0) {
 
                 $conn = null;
-                header('Location: src/dashboard.php');
+                header('Location: /src/dashboard.php');
             } else {
                 print "<script>alert('Login ou senha invalida!')</script>";
             }
