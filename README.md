@@ -1,6 +1,14 @@
+# Instalação das dependências
+ 
+composer install 
+
+# Iniciar docker com o banco de dados
+
+docker-compose up -d
+
 # Comando Utilizado na Aplicação Web
 
-php -S localhost:80
+php -S localhost:8080
 
 # Comandos Utilizados na Migração
 
