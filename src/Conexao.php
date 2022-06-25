@@ -1,5 +1,5 @@
 <?php
-  $host = "localhost"; 
+  $host = "177.44.248.98"; 
   $port = "4000";
   $db = "control_db";
   $username = "pgsql";
