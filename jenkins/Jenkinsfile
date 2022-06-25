@@ -7,7 +7,7 @@ pipeline {
                 docker { image 'php:8.1.0-alpine' }
             }
             steps {
-                sh "composer install && docker-compose up -d && vendor/bin/phinx migrate -e development && php --version"
+                sh "php --version"
             }
         }
     }
