@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'apt install composer && composer install'
+                sh 'sudo apt update' 
+                sh 'sudo apt install composer' 
+                sh 'composer install'
             }
         }
         stage('database') {
