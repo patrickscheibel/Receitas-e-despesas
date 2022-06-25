@@ -4,7 +4,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
 
 # PHP
-RUN apt-get install php php-xml php-pgsql -y
+RUN apt-get install php php-xml php-curl php-pgsql -y
 
 # Composer
 RUN apt-get install composer -y
