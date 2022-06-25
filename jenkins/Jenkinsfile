@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'php --version'
+                sh 'composer install && docker-compose up -d && vendor/bin/phinx migrate -e development && php -S localhost:8080'
             }
         }
     }
