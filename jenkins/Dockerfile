@@ -1,3 +1,5 @@
+FROM ubuntu
+
 # Composer
 RUN apt update && apt install composer -y
 
