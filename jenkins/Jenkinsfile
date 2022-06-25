@@ -3,12 +3,8 @@ pipeline {
     agent any
     stages {
         stage('build') {
-            agent {
-                docker {
-                    image 'composer:latest'
-                }
-            }
             steps {
+                sh 'php composer.phar install'
                 sh 'composer install'
             }
         }
