@@ -34,8 +34,8 @@ final class PaymentMethodTest extends TestCase
     /**
      * Teste para procurar pelo método de pagamento referente ao cartão de crédito 
      */
-    public function testFindByName(): void {
-        $paymentMethod           = PaymentMethod::findByName("Cartão de Crédito");
-        $this->assertEquals(true, $paymentMethod != null);
-    }
+    //public function testFindByName(): void {
+    //    $paymentMethod           = PaymentMethod::findByName("Cartão de Crédito");
+    //    $this->assertEquals(true, $paymentMethod != null);
+    //}
 }
