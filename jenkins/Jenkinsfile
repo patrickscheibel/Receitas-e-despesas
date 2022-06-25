@@ -16,7 +16,7 @@ pipeline {
         }
         stage('migrations') {
             steps {
-                sh 'vendor/bin/phpunit src/tests'
+                sh 'vendor/bin/phinx migrate -e development'
             }
         }
         stage('tests') {
