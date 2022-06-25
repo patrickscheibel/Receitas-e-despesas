@@ -24,7 +24,7 @@ class Conexao
     public static function getInstance()
     {
         if (is_null(self::$conexao)) {
-            self::$conexao = new \PDO("pgsql:host=localhost;port=4000;dbname=control_db;user=pgsql;password=pgsql");
+            self::$conexao = new \PDO("pgsql:host=$host=177.44.248.98;port=4000;dbname=control_db;user=pgsql;password=pgsql");
             self::$conexao->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
             //self::$conexao->exec('set names utf8');
         }
