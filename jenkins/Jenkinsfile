@@ -1,10 +1,10 @@
 #!/usr/bin/env groovy
 pipeline {
+    agent {
+        dockerfile true
+    }
     stages {
         stage('build') {
-            agent {
-                dockerfile true
-            }
             steps {
                 sh 'composer install'
             }
