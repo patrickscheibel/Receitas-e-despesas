@@ -2,9 +2,29 @@
 pipeline {
     agent any
     stages {
+        stage('build') {
+            steps {
+                sh 'composer install'
+            }
+        }
+        stage('database') {
+            steps {
+                sh 'docker-compose up -d'
+            }
+        }
+        stage('migrations') {
+            steps {
+                sh 'vendor/bin/phpunit src/tests'
+            }
+        }
+        stage('tests') {
+            steps {
+                sh 'vendor/bin/phpunit src/tests'
+            }
+        }
         stage('start') {
             steps {
-                sh 'll'
+                sh 'php -S localhost:8080'
             }
         }
     }
