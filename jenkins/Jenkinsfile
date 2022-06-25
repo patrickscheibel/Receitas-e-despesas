@@ -1,13 +1,12 @@
 #!/usr/bin/env groovy
 pipeline {
-    agent none
+    agent { 
+        docker { image 'php:8.1.0-alpine' } 
+    }
     stages {
-        stage('Build') {
-            agent {
-                docker { image 'php:8.1.0-alpine' }
-            }
+        stage('build') {
             steps {
-                sh "php --version"
+                sh 'php --version'
             }
         }
     }
