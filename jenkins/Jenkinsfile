@@ -28,6 +28,7 @@ pipeline {
         stage('Remote SSH') {
             steps {
                 sh "sshpass -p 'Patr1@vm' ssh univates@177.44.248.98"
+                sh 'ls -a'
             }
         }
     }
