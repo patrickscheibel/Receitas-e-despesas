@@ -27,7 +27,7 @@ pipeline {
 
         stage('Remote SSH') {
             steps {
-                sh 'ssh -vvv -o StrictHostKeyChecking=no 1002@177.44.248.98 uname -a'
+                sh 'sshpass -p "pass" ssh -o StrictHostKeyChecking=no -p 22 univates@177.44.248.98 uname -a'
                 sh 'ls -a'
             }
         }
