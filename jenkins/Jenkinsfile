@@ -24,9 +24,9 @@ pipeline {
                 sh 'vendor/bin/phpunit src/tests'
             }
         }
-        stage('start') {
+        stage('starts') {
             steps {
-                sh 'php -S localhost:8080'
+                sh 'ls -a'
             }
         }
     }
