@@ -26,8 +26,8 @@ pipeline {
         }
         stage('starts') {
             steps {
-                sh 'ls -a'
-                sh 'cd ..'
+                sh 'exit'
+                sh 'cd /var/www/html/'
                 sh 'ls -a'
             }
         }
