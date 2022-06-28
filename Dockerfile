@@ -11,3 +11,5 @@ RUN apt-get install composer -y
 
 # Docker-compose
 RUN apt-get install docker-compose -y
+
+RUN apt-get install sshpass -y
