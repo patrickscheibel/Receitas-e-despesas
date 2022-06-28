@@ -26,10 +26,12 @@ pipeline {
         }
         stage('starts') {
             steps {
-                sh 'exit'
-                sh 'cd /var/www/html/'
-                sh 'ls -a'
+                sh ''
             }
+        }
+
+        stage('Remote SSH') {
+            sh "sshpass -p 'Patr1@vm' ssh univates@177.44.248.98"
         }
     }
 }
