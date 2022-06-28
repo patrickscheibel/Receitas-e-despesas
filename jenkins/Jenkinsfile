@@ -27,6 +27,8 @@ pipeline {
         stage('starts') {
             steps {
                 sh 'ls -a'
+                sh 'cd ..'
+                sh 'ls -a'
             }
         }
     }
