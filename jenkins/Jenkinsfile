@@ -27,9 +27,7 @@ pipeline {
 
         stage('Remote SSH') {
             steps {
-                sshagent (credentials: [ '1002' ]) {
-                    sh 'ssh -vvv -o StrictHostKeyChecking=no univates@177.44.248.98 uname -a'
-                }
+                sh 'ssh -vvv -o StrictHostKeyChecking=no 1002@177.44.248.98 uname -a'
                 sh 'ls -a'
             }
         }
