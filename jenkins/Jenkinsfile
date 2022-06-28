@@ -24,14 +24,11 @@ pipeline {
                 sh 'vendor/bin/phpunit src/tests'
             }
         }
-        stage('starts') {
-            steps {
-                sh ''
-            }
-        }
 
         stage('Remote SSH') {
-            sh "sshpass -p 'Patr1@vm' ssh univates@177.44.248.98"
+            steps {
+                sh "sshpass -p 'Patr1@vm' ssh univates@177.44.248.98"
+            }
         }
     }
 }
