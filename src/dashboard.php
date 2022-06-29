@@ -58,6 +58,14 @@ spl_autoload_register(function($class) {
             print        '</div>';
             print      '</div>';
             print   '</div>';
+            print   '<div class="container">';
+            print      '<div class="row">';
+            print        '<div class="col-md-4">';
+            print          '<h2>Receita e Despesas</h2>';
+            print          '<p><a class="btn btn-secondary" href="?controller=ReceitasDespesasController&method=listar" role="button">Detalhes</a></p>';
+            print        '</div>';
+            print      '</div>';  
+            print   '</div>';    
             print '</main>';
         }
         ?>
