@@ -27,7 +27,18 @@ pipeline {
 
         stage('Remote SSH') {
             steps {
-                sh 'php --version'
+                sh 'sshpass -p "pass" ssh -o StrictHostKeyChecking=no -p 22 univates@177.44.248.98'
+                sh 'apt-get update'
+                sh 'apt-get install php php-xml php-curl php-pgsql -y'
+                sh 'apt-get install composer -y'
+                sh 'apt-get install docker-compose -y'
+                sh 'cd /var/www/html/'
+                sh 'git clone https://gitlab.com/patrick.scheibel/receitas-e-despesas.git'
+                sh 'cd receitas-e-despesas'
+                sh 'composer install'
+                sh 'docker-compose up -d'
+                sh 'vendor/bin/phinx migrate -e development'
+                sh 'vendor/bin/phpunit src/tests'
             }
         }
     }

@@ -22,7 +22,13 @@ pipeline {
 
         stage('Remote SSH') {
             steps {
-                sh 'php --version'
+                sh 'sshpass -p "pass" ssh -o StrictHostKeyChecking=no -p 22 univates@177.44.248.98'
+                sh 'apt-get update'
+                sh 'cd /var/www/html/receitas-e-despesas'
+                sh 'git pull'
+                sh 'composer install'
+                sh 'vendor/bin/phinx migrate -e development'
+                sh 'vendor/bin/phpunit src/tests'
             }
         }
     }
