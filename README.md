@@ -18,5 +18,5 @@ vendor/bin/phinx create <nome da migration>
 ## Executar as migrations: 
 vendor/bin/phinx migrate -e development
 
-# Executar Testes
+## Executar Testes
 vendor/bin/phpunit src/tests
